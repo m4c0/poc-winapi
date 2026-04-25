@@ -49,7 +49,8 @@ static int compile(char * name) {
 int main(int argc, char ** argv) {
   if (argc != 1) return (usage(), 1);
 
-  if (compile("hello")) return 1;
+  if (compile("hello-winmain")) return 1;
+  if (compile("hello-main")) return 1;
 
   return 0;
 }
