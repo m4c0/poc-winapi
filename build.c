@@ -39,9 +39,7 @@ static int compile(char * name) {
   char exe[1024];
   sprintf(exe, "%s.exe", name);
 
-  if (mtime(src) < mtime(exe)) return 0;
-
-  char * args[] = { CC, "-Wall", "-g", "-o", exe, src, 0 };
+  char * args[] = { CC, "-Wall", "-g", "-o", exe, src, "-luser32", 0 };
   if (run(args)) return 1;
 
   fprintf(stderr, "%s\n", src);
