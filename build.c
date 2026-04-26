@@ -49,6 +49,7 @@ static int compile(char * name) {
 int main(int argc, char ** argv) {
   if (argc != 1) return (usage(), 1);
 
+  if (compile("fullscreen")) return 1;
   if (compile("hello-winmain")) return 1;
   if (compile("hello-main")) return 1;
   if (compile("wndproc")) return 1;
