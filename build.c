@@ -51,6 +51,7 @@ int main(int argc, char ** argv) {
 
   if (compile("hello-winmain")) return 1;
   if (compile("hello-main")) return 1;
+  if (compile("wndproc")) return 1;
 
   return 0;
 }
